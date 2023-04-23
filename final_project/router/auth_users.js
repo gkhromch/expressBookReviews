@@ -80,7 +80,7 @@ regd_users.delete("/auth/review/:isbn", (req, res) => {
   if(books.hasOwnProperty(isbn)) {
     if(books[isbn].reviews.hasOwnProperty(user)) {
       delete books[isbn].reviews[user];
-      res.send(`Review by ${user} deleted for book ${isbn}`);
+      res.send(`Review by ${user} for book ${isbn} deleted`);
     }
     else { res.send(`Review by ${user} for book ${isbn} does not exist`);}
   }
